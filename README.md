@@ -1,4 +1,4 @@
-# [cite_start]Procedimientos Microsoft: PowerShell
+# Procedimientos Microsoft: PowerShell
 **Autor:** Fabio Andrés Vidal Aybar
 
 Este repositorio contiene una guía detallada sobre la gestión de módulos, conexiones y procedimientos específicos para la administración de entornos Microsoft mediante PowerShell[cite: 8].
@@ -18,7 +18,13 @@ Pero antes de eso debes entender que para que powershell se pueda comunicar con 
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck
 ```
-# a
-## a
-### a
-#### a
+### Scope: Scope sirve principalmente para saltarse restricciones de archivos del sistema:
+```powershell
+Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber
+```
+### Instalar modulo Exchange
+```powershell
+Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope CurrentUser
+
+Import-Module ExchangeOnlineManagement
+```
