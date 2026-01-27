@@ -23,7 +23,7 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 # 2. Actualizar gestor de paquetes 
 ```Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck```
 
-Uso de Scope 
+* Uso de Scope 
 El parámetro Scope permite saltarse restricciones de archivos del sistema instalando el módulo solo para el usuario actual:
 ```Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber```
 
