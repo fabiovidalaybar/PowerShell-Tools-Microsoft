@@ -14,3 +14,5 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 ### Instalación de módulos 
 * Para instalar los módulos es necesario tener instalada y actualizadas las herramientas de PowerShellGet y PackageManagement, a estos se les llama “gestores de paquete”  y sirven precisamente para eso, para instalar los módulos. 
 Pero antes de eso debes entender que para que powershell se pueda comunicar con repositorios externos debes tener actualizado “Nuget” ya que éste es el motor que permite esa comunicación. Por lo que esto es lo primero que debes instalar antes de todo:
+
+```Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force```
