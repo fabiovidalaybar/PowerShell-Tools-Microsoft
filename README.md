@@ -18,13 +18,13 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 
 ```powershell
 # 1. Instalar el motor NuGet
-```Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force```
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 
 # 2. Actualizar gestor de paquetes 
-```Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck```
+Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck```
 
-Uso de Scope 
-El parámetro Scope permite saltarse restricciones de archivos del sistema instalando el módulo solo para el usuario actual:
+###Uso de Scope 
+* El parámetro Scope permite saltarse restricciones de archivos del sistema instalando el módulo solo para el usuario actual:
 ```Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber```
 
 -Exchange
