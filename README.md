@@ -12,21 +12,5 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 * Se recomienda ejecutar los códigos en **PowerShell 7** por ser una versión más avanzada; de lo contrario, utilizar la versión 5.
 
 ### Instalación de módulos 
-* Para instalar módulos, es imprescindible contar con los "gestores de paquetes" (**PowerShellGet** y **PackageManagement**) instalados y actualizados. 
-
-* Antes de esto, el motor **NuGet** debe estar actualizado para permitir la comunicación con repositorios externos:
-
-powershell
-```# 1. Instalar el motor NuGet
-Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-
-# 2. Actualizar gestor de paquetes 
-Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck```
-
-###Uso de Scope 
-* El parámetro Scope permite saltarse restricciones de archivos del sistema instalando el módulo solo para el usuario actual:
-```Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber```
-
--Exchange
-```Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope CurrentUser
-Import-Module ExchangeOnlineManagement```
+* Para instalar los módulos es necesario tener instalada y actualizadas las herramientas de PowerShellGet y PackageManagement, a estos se les llama “gestores de paquete”  y sirven precisamente para eso, para instalar los módulos. 
+Pero antes de eso debes entender que para que powershell se pueda comunicar con repositorios externos debes tener actualizado “Nuget” ya que éste es el motor que permite esa comunicación. Por lo que esto es lo primero que debes instalar antes de todo:
