@@ -52,7 +52,7 @@ Disconnect-ExchangeOnline
 ### Comandos Base
 
 Variables:  
-Tipo String  
+**Tipo String**  
 
 > [!IMPORTANT]
 > Las comillas simples y dobles cambian el contexto, ojito con eso.
@@ -67,7 +67,7 @@ $nombre = "Fabio"
 $mensaje = 'Hola $nombre'     
 El resultado será: Hola $nombre (literalmente)
 
-Tipo Lista    
+**Tipo Lista**    
 $nombre_de_la_variable = @(1, 2, 3, “A”)    
 
 
