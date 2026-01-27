@@ -18,13 +18,17 @@ Pero antes de eso debes entender que para que powershell se pueda comunicar con 
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck
 ```
-### Scope: Scope sirve principalmente para saltarse restricciones de archivos del sistema:
+#### Scope: Scope sirve principalmente para saltarse restricciones de archivos del sistema:
 ```powershell
 Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber
 ```
-### Instalar modulo Exchange
+#### Instalar modulo Exchange
 ```powershell
 Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope CurrentUser
 
 Import-Module ExchangeOnlineManagement
 ```
+## Conexiones
+
+> [!NOTE]
+> Esta es una nota informativa para el usuario.
