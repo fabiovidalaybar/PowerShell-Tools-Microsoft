@@ -71,7 +71,7 @@ El resultado será: Hola $nombre (literalmente)
 $nombre_de_la_variable = @(1, 2, 3, “A”)    
 
 
-# *Procedimientos*
+# **Procedimientos**
 
 *Ajuste Visual de Horarios en Calendarios de Sala*  
 1. El Problema: El "Bloqueo Gris" en Outlook  
@@ -84,9 +84,9 @@ Set-MailboxCalendarConfiguration -Identity "sala@dominio.com" -WorkingHoursStart
 3. Desglose de Parámetros  
 Parámetro	Función	Importancia  
 -Identity	Identifica el correo electrónico de la sala.	Es el "sujeto" de la acción.  
-*-WorkingHoursStartTime*:	Define cuándo se "ilumina" el calendario en la mañana.	Evita que el calendario se vea gris antes de empezar la jornada.  
-*-WorkingHoursEndTime*:	Define cuándo vuelve a sombrearse el calendario en la tarde.	Al extenderlo (ej. a las 20:00), se eliminan las restricciones visuales para agendar tarde.  
-*-WorkingHoursTimeZone*:	Asegura que el horario se base en la zona horaria local.	Para Chile, se usa "SA Pacific Standard Time" para evitar desfases.  
+**-WorkingHoursStartTime**:	Define cuándo se "ilumina" el calendario en la mañana.	Evita que el calendario se vea gris antes de empezar la jornada.  
+**-WorkingHoursEndTime**:	Define cuándo vuelve a sombrearse el calendario en la tarde.	Al extenderlo (ej. a las 20:00), se eliminan las restricciones visuales para agendar tarde.  
+**-WorkingHoursTimeZone**:	Asegura que el horario se base en la zona horaria local.	Para Chile, se usa "SA Pacific Standard Time" para evitar desfases.  
 
 
   
