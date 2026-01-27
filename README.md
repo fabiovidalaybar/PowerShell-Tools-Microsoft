@@ -17,7 +17,7 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 * Antes de esto, el motor **NuGet** debe estar actualizado para permitir la comunicación con repositorios externos:
 
 powershell
-# 1. Instalar el motor NuGet
+```# 1. Instalar el motor NuGet
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 
 # 2. Actualizar gestor de paquetes 
