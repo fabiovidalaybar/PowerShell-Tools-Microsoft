@@ -51,7 +51,7 @@ Disconnect-ExchangeOnline
 ## Utilidades
 ### Comandos Base
 
-Variables:
+Variables:  
 Tipo String
 Nota: las comillas simples y dobles cambian el contexto, ojito con eso
 $nombre_de_la_variable = "fabio"
