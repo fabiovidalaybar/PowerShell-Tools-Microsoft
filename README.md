@@ -53,8 +53,11 @@ Disconnect-ExchangeOnline
 
 Variables:  
 Tipo String  
+
 > [!IMPORTANT]
 > Las comillas simples y dobles cambian el contexto, ojito con eso.
+
+
 $nombre_de_la_variable = "fabio"  
 Ejemplo:  
 $nombre = "Fabio"  
