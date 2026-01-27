@@ -4,7 +4,9 @@
 Este repositorio contiene una guía detallada sobre la gestión de módulos, conexiones y procedimientos específicos para la administración de entornos Microsoft mediante PowerShell[cite: 8].
 
 ---
+```powershell
 
+```
 ## Módulos 
 
 ### Notas importantes:
@@ -30,5 +32,39 @@ Import-Module ExchangeOnlineManagement
 ```
 ## Conexiones
 
-> [!NOTE]
-> Esta es una nota informativa para el usuario.
+> [!Nota]
+> Usar principalmente powershell V7
+
+#### Conectarse a Exchange
+```powershell
+Connect-ExchangeOnline
+```
+## O
+```powershell
+Connect-ExchangeOnline -UserPrincipalName vedata@aurysconsulting.com
+```
+* Commando para desconectarse al final de la sesión:
+```powershell
+Disconnect-ExchangeOnline
+```
+
+## Utilidades
+### Comandos Base
+
+Variables:
+Tipo String
+Nota: las comillas simples y dobles cambian el contexto, ojito con eso
+$nombre_de_la_variable = "fabio"
+Ejemplo:
+$nombre = "Fabio"
+$mensaje = "Hola $nombre" 
+# El resultado será: Hola Fabio
+$nombre = "Fabio"
+$mensaje = 'Hola $nombre' 
+# El resultado será: Hola $nombre (literalmente)
+
+Tipo Lista
+$nombre_de_la_variable = @(1, 2, 3, “A”)
+
+
+  
