@@ -71,4 +71,7 @@ El resultado será: Hola $nombre (literalmente)
 $nombre_de_la_variable = @(1, 2, 3, “A”)    
 
 
+# *Procedimientos*
+
+
   
