@@ -62,10 +62,10 @@ $nombre_de_la_variable = "fabio"
 Ejemplo:  
 $nombre = "Fabio"  
 $mensaje = "Hola $nombre"   
-# El resultado será: Hola Fabio    
+El resultado será: Hola Fabio    
 $nombre = "Fabio"    
 $mensaje = 'Hola $nombre'     
-# El resultado será: Hola $nombre (literalmente)
+El resultado será: Hola $nombre (literalmente)
 
 Tipo Lista    
 $nombre_de_la_variable = @(1, 2, 3, “A”)    
