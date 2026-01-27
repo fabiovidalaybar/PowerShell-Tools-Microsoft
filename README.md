@@ -73,7 +73,7 @@ $nombre_de_la_variable = @(1, 2, 3, “A”)
 
 # **Procedimientos**
 
-*Ajuste Visual de Horarios en Calendarios de Sala*  
+**Ajuste Visual de Horarios en Calendarios de Sala**  
 1. El Problema: El "Bloqueo Gris" en Outlook  
 Cuando un usuario intenta agendar una sala y ve que el fondo del calendario cambia de color (normalmente a gris) a partir de cierta hora, no siempre significa que la sala esté ocupada. Generalmente, esto indica que se ha alcanzado el límite de las Horas Laborales (Working Hours) configuradas en el buzón del recurso.  
 2. El Comando de Solución  
