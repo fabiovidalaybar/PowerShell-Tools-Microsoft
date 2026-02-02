@@ -52,7 +52,10 @@ Connect-ExchangeOnline -UserPrincipalName vedata@aurysconsulting.com
 ```powershell
 Disconnect-ExchangeOnline
 ```
-
+### Conectarse a Sharepoint
+```powershell
+Connect-SPOService -Url https://aurysconsulting-admin.sharepoint.com
+```
 ## Utilidades
 ### Comandos Base
 
