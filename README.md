@@ -31,6 +31,8 @@ Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope Curren
 Import-Module ExchangeOnlineManagement
 ```
 ### Instalar módulo Sharepoint
+> [!Nota]
+> Para conectarse a SP, se debe usar PowerShell 5.1
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Force
 Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -54,7 +56,7 @@ Disconnect-ExchangeOnline
 ```
 ### Conectarse a Sharepoint
 ```powershell
-Connect-SPOService
+Connect-SPOService -Url https://xxx-admin.sharepoint.com
 ```
 ## Utilidades
 ### Comandos Base
