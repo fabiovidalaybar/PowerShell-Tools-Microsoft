@@ -54,7 +54,7 @@ Disconnect-ExchangeOnline
 ```
 ### Conectarse a Sharepoint
 ```powershell
-Connect-SPOService -Url https://aurysconsulting-admin.sharepoint.com
+Connect-SPOService
 ```
 ## Utilidades
 ### Comandos Base
