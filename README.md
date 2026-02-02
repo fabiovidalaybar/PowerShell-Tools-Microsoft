@@ -30,6 +30,11 @@ Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope Curren
 
 Import-Module ExchangeOnlineManagement
 ```
+### Instalar módulo Sharepoint
+```powershell
+Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Force
+Import-Module Microsoft.Online.SharePoint.PowerShell
+```
 ## Conexiones
 
 > [!Nota]
