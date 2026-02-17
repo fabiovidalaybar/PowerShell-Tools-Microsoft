@@ -30,12 +30,9 @@ Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope Curren
 
 Import-Module ExchangeOnlineManagement
 ```
-### Instalar módulo PnP
+### Instalar e importar módulo PnP
 ```powershell
 Install-Module PnP.PowerShell
-```
-Importar modulo pnp
-```powershell
 Import-Module PnP.PowerShell
 ```
 ### Instalar módulo Sharepoint
