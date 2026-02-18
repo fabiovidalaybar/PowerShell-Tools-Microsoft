@@ -7,11 +7,11 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 ```powershell
 
 ```
-## Módulos 
+## Módulos y conexiones
 
 ### Notas importantes:
 * Reinstalar módulos no corrompe los archivos; de hecho, sirve para actualizarlos.
-* Se recomienda ejecutar los códigos en **PowerShell 7** por ser una versión más avanzada; de lo contrario, utilizar la versión 5.
+* Existen modulos que funcionan con V7 y otros solo con V5
 
 ### Instalación de módulos 
 * Para instalar los módulos es necesario tener instalada y actualizadas las herramientas de PowerShellGet y PackageManagement, a estos se les llama “gestores de paquete”  y sirven precisamente para eso, para instalar los módulos. 
@@ -24,11 +24,21 @@ Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck
 ```powershell
 Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber
 ```
-#### Instalar modulo Exchange
+#### Exchange
 ```powershell
 Install-Module -Name ExchangeOnlineManagement -Force -AllowClobber -Scope CurrentUser
-
 Import-Module ExchangeOnlineManagement
+```
+```powershell
+Connect-ExchangeOnline
+```
+## O
+```powershell
+Connect-ExchangeOnline -UserPrincipalName vedata@aurysconsulting.com
+```
+* Commando para desconectarse al final de la sesión:
+```powershell
+Disconnect-ExchangeOnline
 ```
 ### Instalar e importar módulo PnP
 ```powershell
@@ -44,21 +54,9 @@ Import-Module Microsoft.Online.SharePoint.PowerShell
 ```
 ## Conexiones
 
-> [!Nota]
-> Usar principalmente powershell V7
-
 #### Conectarse a Exchange
-```powershell
-Connect-ExchangeOnline
-```
-## O
-```powershell
-Connect-ExchangeOnline -UserPrincipalName vedata@aurysconsulting.com
-```
-* Commando para desconectarse al final de la sesión:
-```powershell
-Disconnect-ExchangeOnline
-```
+
+
 ### Conectarse a Sharepoint
 ```powershell
 Connect-SPOService -Url https://xxx-admin.sharepoint.com
