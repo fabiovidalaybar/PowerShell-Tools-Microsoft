@@ -13,7 +13,7 @@ Este repositorio contiene una guía detallada sobre la gestión de módulos, con
 * Reinstalar módulos no corrompe los archivos; de hecho, sirve para actualizarlos.
 * Existen modulos que funcionan con V7 y otros solo con V5
 
-### Instalación de módulos 
+### Instalación de módulos y conexiones
 * Para instalar los módulos es necesario tener instalada y actualizadas las herramientas de PowerShellGet y PackageManagement, a estos se les llama “gestores de paquete”  y sirven precisamente para eso, para instalar los módulos. 
 Pero antes de eso debes entender que para que powershell se pueda comunicar con repositorios externos debes tener actualizado “Nuget” ya que éste es el motor que permite esa comunicación. Por lo que esto es lo primero que debes instalar antes de todo:
 ```powershell
@@ -45,17 +45,14 @@ Disconnect-ExchangeOnline
 Install-Module PnP.PowerShell
 Import-Module PnP.PowerShell
 ```
-### Instalar módulo Sharepoint
+* a finales de 2024 por razones de seguridad. Ahora, cada tenant (como el de Aurys Consulting) debe registrar su propia aplicación en Entra ID para que el módulo funcione.
+### Sharepoint
 > [!Nota]
 > Para conectarse a SP, se debe usar PowerShell 5.1
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Force
 Import-Module Microsoft.Online.SharePoint.PowerShell
 ```
-## Conexiones
-
-#### Conectarse a Exchange
-
 
 ### Conectarse a Sharepoint
 ```powershell
