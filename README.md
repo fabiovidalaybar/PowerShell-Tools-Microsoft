@@ -55,7 +55,14 @@ Import-Module PnP.PowerShell
     * Entra con tus credenciales de admin.
     * Te aparecerá una pantalla de "Permisos solicitados". Debes marcar la casilla "Consentimiento en nombre de su organización" y hacer clic en Aceptar.
     * Una vez termine, la consola te mostrará un Client ID (un código largo de letras y números). Cópialo y guárdalo, lo necesitaremos ahora.
-  
+
+  * Ahora que tienes tu propia aplicación registrada, usa ese ID para conectar. Reemplaza TU-CLIENT-ID-AQUÍ por el código que obtuviste en el paso anterior:
+```powershell
+$siteUrl = "url de la pagina de SP a la que te quieres conectar"
+$clientId = "TU-CLIENT-ID-AQUÍ"
+
+Connect-PnPOnline -Url $siteUrl -Interactive -ClientId $clientId
+```
 ### Sharepoint
 > [!Nota]
 > Para conectarse a SP, se debe usar PowerShell 5.1
