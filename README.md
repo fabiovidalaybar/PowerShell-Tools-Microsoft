@@ -116,4 +116,48 @@ Parámetro	Función	Importancia
 **-WorkingHoursTimeZone**:	Asegura que el horario se base en la zona horaria local.	Para Chile, se usa "SA Pacific Standard Time" para evitar desfases.  
 
 
-  
+**Eliminación de historial de versiones Share Point**
+* Primero se debe conectar al modulo de pnp (ver procedimientos arriba)
+* luego puedes ejecutar este script que borrará las versiones en un ciclo for (evidentemente debes cambiar las rutas acorde a lo que deseas procesar)
+```PowerShell
+  # 1. Variables de entorno del cliente
+$siteUrl = "https://aurysconsulting.sharepoint.com/sites/2022-CMDICEconomaCirculaFaseV-Documentos"
+$clientId = "96cf9290-a60e-46a3-aa8e-884b62485a8f"
+
+# 2. Lista de subcarpetas específicas a limpiar
+$carpetas = @(
+    "Documentos compartidos/1. Documentos de Trabajo/8. Extras/Imágenes",
+    "Documentos compartidos/1. Documentos de Trabajo/8. Extras/2212 Presentaciones",
+    "Documentos compartidos/1. Documentos de Trabajo/8. Extras/2312 Presentaciones",
+    "Documentos compartidos/1. Documentos de Trabajo/8. Extras/2412 Presentaciones",
+    "Documentos compartidos/1. Documentos de Trabajo/8. Extras/2512 Presentaciones"
+)
+
+# 3. Conexión con el tenant de Aurys
+Connect-PnPOnline -Url $siteUrl -Interactive -ClientId $clientId
+
+# 4. Procesamiento por carpeta
+foreach ($ruta in $carpetas) {
+    Write-Host "`n--- Iniciando carpeta: $ruta ---" -ForegroundColor Yellow
+    
+    # Obtenemos los archivos dentro de la subcarpeta
+    $files = Get-PnPFolderItem -FolderSiteRelativeUrl $ruta -ItemType File -Recursive -ErrorAction SilentlyContinue
+    
+    if ($null -eq $files) {
+        Write-Host "Ruta no encontrada o carpeta vacía." -ForegroundColor Gray
+        continue
+    }
+
+    foreach ($file in $files) {
+        try {
+            # Eliminamos versiones anteriores
+            Remove-PnPFileVersion -Url $file.ServerRelativeUrl -All -Force
+            Write-Host "Historial borrado: $($file.Name)" -ForegroundColor Green
+        } catch {
+            Write-Host "Error en $($file.Name): $($_.Exception.Message)" -ForegroundColor Red
+        }
+    }
+}
+
+Write-Host "`n[!] Tarea finalizada exitosamente." -ForegroundColor Cyan
+```
