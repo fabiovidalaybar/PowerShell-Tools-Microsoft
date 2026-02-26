@@ -45,7 +45,17 @@ Disconnect-ExchangeOnline
 Install-Module PnP.PowerShell
 Import-Module PnP.PowerShell
 ```
-* a finales de 2024 por razones de seguridad. Ahora, cada tenant (como el de Aurys Consulting) debe registrar su propia aplicación en Entra ID para que el módulo funcione.
+* A finales de 2024 por razones de seguridad. Ahora, cada tenant debe registrar su propia aplicación en Entra ID para que el módulo funcione.
+  para registrar tu propia aplicación en Entra ID
+  ```powershell
+  Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell Aurys" -Tenant escribirnombredeltenant
+  ```
+  * ### Qué pasará ahora:
+    * Se abrirá una ventana de inicio de sesión de Microsoft.
+    * Entra con tus credenciales de admin.
+    * Te aparecerá una pantalla de "Permisos solicitados". Debes marcar la casilla "Consentimiento en nombre de su organización" y hacer clic en Aceptar.
+    * Una vez termine, la consola te mostrará un Client ID (un código largo de letras y números). Cópialo y guárdalo, lo necesitaremos ahora.
+  
 ### Sharepoint
 > [!Nota]
 > Para conectarse a SP, se debe usar PowerShell 5.1
