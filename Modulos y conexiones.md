@@ -25,7 +25,7 @@ Connect-ExchangeOnline
 ```
 O
 ```powershell
-Connect-ExchangeOnline -UserPrincipalName vedata@aurysconsulting.com
+Connect-ExchangeOnline -UserPrincipalName vedata@dominio.com
 ```
 * Commando para desconectarse al final de la sesión:
 ```powershell
