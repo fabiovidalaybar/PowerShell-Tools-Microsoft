@@ -1,3 +1,0 @@
-```powershell
-winget upgrade --id Microsoft.PowerShell
-```
