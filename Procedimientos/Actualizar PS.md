@@ -8,3 +8,7 @@ iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
 ```
 
 <img width="764" height="473" alt="image" src="https://github.com/user-attachments/assets/d0efc8f7-fb4b-4fe2-9ae4-fdec34b4f720" />
+
+Siguiente Siguiente Siguiente Siguiente Siguiente Siguiente Siguiente 
+
+Finalizar listo!
