@@ -19,7 +19,7 @@ Utilizamos un "pipeline" para filtrar solo a los usuarios con buzón activo y as
 
 ```powershell
 # Comando para filtrar por dominio y establecer la empresa
-Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Where-Object {$_.PrimarySmtpAddress -like "*@aurysconsulting.com"} | Set-User -Company "Aurys"
+Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Where-Object {$_.PrimarySmtpAddress -like "*@dominio.com"} | Set-User -Company "asd"
 ```
 🔍 Desglose del Comando:
 Get-Mailbox -RecipientTypeDetails UserMailbox: Filtra solo buzones de usuario humanos. Esto es clave para evitar errores de licencia, ya que solo interactúa con cuentas que tienen un buzón activo.
@@ -31,7 +31,7 @@ Set-User -Company "Nombre": Aplica el valor al atributo de organización necesar
 Para confirmar que los cambios se aplicaron correctamente, ejecuta el siguiente comando de consulta:
 
 ```powershell
-Get-User -Filter "Company -eq 'Aurys'" | Select-Object DisplayName, Company, UserPrincipalName
+Get-User -Filter "Company -eq 'asd'" | Select-Object DisplayName, Company, UserPrincipalName
 ```
 
 💡 Notas Importantes
