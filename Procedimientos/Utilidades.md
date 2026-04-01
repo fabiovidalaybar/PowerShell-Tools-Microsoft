@@ -1,6 +1,4 @@
-```powershelll
-
-```
+`
 
 ## Utilidades
 ### Comandos Base
