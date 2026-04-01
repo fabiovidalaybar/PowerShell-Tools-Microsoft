@@ -23,7 +23,7 @@ Import-Module ExchangeOnlineManagement
 ```powershell
 Connect-ExchangeOnline
 ```
-## O
+O
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName vedata@aurysconsulting.com
 ```
