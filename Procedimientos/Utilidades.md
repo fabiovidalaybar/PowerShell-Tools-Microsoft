@@ -21,3 +21,15 @@ El resultado será: Hola $nombre (literalmente)
 
 **Tipo Lista**    
 $nombre_de_la_variable = @(1, 2, 3, “A”)    
+
+
+
+# Consultar miembros de lista dinámica
+
+```powershell
+# 1. Guardamos la lista en una variable
+$listaDinamica = Get-DynamicDistributionGroup -Identity "Nombre_de_la_lista"
+
+# 2. Le pedimos a Exchange que nos dé la vista previa según su filtro
+Get-Recipient -RecipientPreviewFilter $listaDinamica.RecipientFilter | Select-Object Name, PrimarySmtpAddress
+```
