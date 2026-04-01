@@ -1,5 +1,5 @@
 ```powershell
-winget upgrade --id Microsoft.PowerShell
+winget upgrade --id Microsoft.PowerShell --force
 ```
 En algunos casos el comando anterior no funcionará por que la forma en que instalamos anteriormente PS fue con otra tecnología, en dicho caso, se debe usar el siguiente comando
 
