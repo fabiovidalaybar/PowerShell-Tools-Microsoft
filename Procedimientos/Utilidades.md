@@ -33,3 +33,8 @@ $listaDinamica = Get-DynamicDistributionGroup -Identity "Nombre_de_la_lista"
 # 2. Le pedimos a Exchange que nos dé la vista previa según su filtro
 Get-Recipient -RecipientPreviewFilter $listaDinamica.RecipientFilter | Select-Object Name, PrimarySmtpAddress
 ```
+# Consultar miembros de lista estática
+
+```powershell
+Get-DistributionGroupMember -Identity "Nombre_de_tu_lista" | Select-Object Name, PrimarySmtpAddress
+```
