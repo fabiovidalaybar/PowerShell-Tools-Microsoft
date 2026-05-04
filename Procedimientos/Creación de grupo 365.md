@@ -15,10 +15,12 @@ Con este código puedes crear el grupo añadiendo multiples usuarios que deben e
 Creamos el nuevo grupo de Microsoft 365
 $nombreGrupo = "Nombre de tu Grupo"
 $aliasGrupo = "alias-del-grupo"
+$correoGrupo = "mi-grupo-nuevo@tudominio.com"
 
 Write-Host "Creando el grupo $nombreGrupo..." -ForegroundColor Cyan
 New-UnifiedGroup -DisplayName $nombreGrupo `
                  -Alias $aliasGrupo `
+                 -PrimarySmtpAddress $correoGrupo `
                  -AccessType "Private" `
                  -Owner "tu-admin@tudominio.com"
 
