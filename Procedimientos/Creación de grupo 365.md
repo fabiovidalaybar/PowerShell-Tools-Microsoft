@@ -12,7 +12,7 @@ New-UnifiedGroup -DisplayName "Nombre del Grupo" `
 ```
 Con este código puedes crear el grupo añadiendo multiples usuarios que deben estar previamente cargados en un archivo .csv
 ```powershell
-Creamos el nuevo grupo de Microsoft 365
+#Creamos el nuevo grupo de Microsoft 365
 $nombreGrupo = "Nombre de tu Grupo"
 $aliasGrupo = "alias-del-grupo"
 $correoGrupo = "mi-grupo-nuevo@tudominio.com"
