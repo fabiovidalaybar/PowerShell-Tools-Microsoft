@@ -12,7 +12,7 @@ winget install Microsoft.NuGet
 ```
 Actualizarlo
 ```powershell
-winget install Microsoft.NuGet
+nuget update -self
 ```
 #### Scope: Scope sirve principalmente para saltarse restricciones de archivos del sistema:
 ```powershell
